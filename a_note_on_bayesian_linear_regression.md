@@ -1,31 +1,11 @@
-1
-
-
-
-
 
 #### a note on beyesian linear regression
-
-
-
 
 general form:
 $$y_i=\beta^Tx_i+\epsilon_i$$
 now assume $y_i$ comes from $N(\beta^Tx_i, \sigma^2)$
 
-
-
-
-
-
-
-
 compute the likelihood given assumption that $\epsilon_i$ are independent:
-
-
-
-
-
 
 $\begin{aligned}
 P(y|X,\beta,\sigma^2) &= \prod_{i=1}^n P(y_i|x_i,\beta,\sigma^2) \\
@@ -42,25 +22,8 @@ $\begin{aligned}
 
 
 
-
-
-
-
-
-
 then we will compute the conditional likelihood $P(\beta | y,x,\sigma^2)$. Suppose we have known the value of $\sigma^2$, and prior distribution of $\beta$ comes from $N_k(\beta_0, \Sigma_0)$. Then $P(\beta) = ({(2\pi)^k |\Sigma_0|})^{-1/2}  exp\left\{ -\dfrac12 (\beta-\beta_0)^T\Sigma_0^{-1} (\beta-\beta_0) \right\}$.
 According to bayes throey,
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -78,8 +41,6 @@ this is proportional to a multivariate normal distribution(to be proved later), 
 
 $$\beta |y,X,\sigma^2 \sim N(A_{\sigma^2}^{-1}B_{\sigma^2}, A_{\sigma^2}^{-1})$$
 where $A_{\sigma^2}=\Sigma_0^{-1}+X^TX/\sigma^2$, $B_{\sigma^2}=\Sigma_0^{-1}\beta_0 + X^Ty/\sigma^2$
-
-
 
 
 
