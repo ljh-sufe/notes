@@ -94,8 +94,11 @@ where <img src="https://latex.codecogs.com/gif.latex?SSR(&#x5C;beta)%20=%20y^Ty%
 after we have the posterior distribution, we do the Gibbs sampling. 
   
 STEP 1: sample <img src="https://latex.codecogs.com/gif.latex?&#x5C;gamma_0"/> fron <img src="https://latex.codecogs.com/gif.latex?P(&#x5C;gamma)"/>, <img src="https://latex.codecogs.com/gif.latex?&#x5C;sigma_0^2%20=%201&#x2F;&#x5C;gamma_0"/>
+
 STEP 2: sample <img src="https://latex.codecogs.com/gif.latex?&#x5C;beta_t"/> from <img src="https://latex.codecogs.com/gif.latex?N(A_{&#x5C;sigma_t^2}^{-1}B_{&#x5C;sigma_t^2},%20A_{&#x5C;sigma_t^2}^{-1})"/> 
+
 STEP 3: sample <img src="https://latex.codecogs.com/gif.latex?&#x5C;sigma^2_{t+1}"/> from <img src="https://latex.codecogs.com/gif.latex?inverse-gamma(&#x5C;frac{v_0+n}{2},%20&#x5C;frac12(v_0&#x5C;sigma_0^2++%20SSR(&#x5C;beta_t)))"/>, <img src="https://latex.codecogs.com/gif.latex?t=t+1"/>
+
 STEP 4: return to STEP 2, t=0 to 10000
   
   
