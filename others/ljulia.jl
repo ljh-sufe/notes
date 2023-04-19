@@ -21,8 +21,9 @@ function matrixMultiplication(a::AbstractMatrix, b::AbstractMatrix)
     return c
 end
 
-function matrixMultiplicationLoop(a::AbstractMatrix, b::AbstractMatrix, c::AbstractMatrix)
-    d::AbstractMatrix = a*b*c
+
+function matrixMultiplicationLoop(a::Matrix{Float64}, b::Matrix{Float64}, c::Matrix{Float64})
+    d::Matrix{Float64} = a*b*c
     for i in 1:999
         d=d + a*b*c
     end
